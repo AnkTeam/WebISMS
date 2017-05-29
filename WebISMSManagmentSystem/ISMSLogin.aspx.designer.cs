@@ -22,22 +22,22 @@ namespace WebISMSManagmentSystem {
         protected global::System.Web.UI.WebControls.Label ldlMessage;
         
         /// <summary>
-        /// TextBox1 control.
+        /// TxtUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox TxtUsername;
         
         /// <summary>
-        /// TextBox2 control.
+        /// txtpassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtpassword;
         
         /// <summary>
         /// remember_me control.

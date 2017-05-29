@@ -1,9 +1,9 @@
 ﻿
 function Loginvalidate() {
     debugger
-    var x = $('[id$=TextBox1]').val();;
+    var x = $('[id$=TxtUsername]').val();;
     
-    var pass = $('[id$=TextBox2]').val();;
+    var pass = $('[id$=txtpassword]').val();;
   
     if (x == "" || x == '') {
         alert("Username  must be filled out");

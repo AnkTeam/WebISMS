@@ -5,13 +5,12 @@
  
     <script src="JsLogin/jquery-1.7.2.min.js"></script>
     <script src="JsLogin/Loginformvalidation.js"></script>
-  
  <section class="container">
     <div class="login">
       <h1>Login to ISMS</h1>
      <p><asp:Label ID="ldlMessage" ForeColor="Red" runat="server"></asp:Label></p>
-        <p>   <asp:TextBox ID="TextBox1" runat="server" placeholder="Username"  ></asp:TextBox></p>
-        <p> <asp:TextBox ID="TextBox2" runat="server"  placeholder="Password" TextMode="Password"></asp:TextBox></p>
+        <p>   <asp:TextBox ID="TxtUsername" runat="server" placeholder="Username"  ></asp:TextBox></p>
+        <p> <asp:TextBox ID="txtpassword" runat="server"  placeholder="Password" TextMode="Password"></asp:TextBox></p>
         <p class="remember_me">
               <asp:CheckBox ID="remember_me"  runat="server" OnCheckedChanged="remember_me_CheckedChanged" />
               <label>
