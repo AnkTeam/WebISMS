@@ -16,6 +16,7 @@ namespace WebISMSManagmentSystem
     /// </summary>
     public class UploadTemplate : IHttpHandler
     {
+
         private string baseTemplatePath = "~/UploadTemplate";
         private DirectoryInfo templateDirectory = new DirectoryInfo(HttpContext.Current.Server.MapPath("~/UploadTemplate"));
         Dictionary<int, List<DocTemplate>> document = new Dictionary<int, List<DocTemplate>>();
