@@ -14,7 +14,6 @@
  
      
 
-
     <style type="text/css">
         .modal-dialog {
             margin-right: 500px;
