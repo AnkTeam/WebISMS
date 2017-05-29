@@ -15,9 +15,7 @@ namespace WebISMSManagmentSystem
        System.Windows.Forms.TabControl dynamicTabControl = new TabControl();
      
         protected void Page_Load(object sender, EventArgs e)
-        {
-           
-            
+        {= 
             if (!IsPostBack)
             {
                 if (Session["Emp_Name"] != null)
