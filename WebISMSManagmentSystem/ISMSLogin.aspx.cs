@@ -10,11 +10,9 @@ namespace WebISMSManagmentSystem
 {
     public partial class ISMSLogin : System.Web.UI.Page
     {
-        BLLLogin bal = new BLLLogin();
-     
+        BLLLogin bal = new BLLLogin();       
         protected void Page_Load(object sender, EventArgs e)
-        {
-          
+        {          
             //HttpCookie reqCookies = Request.Cookies["UserId"];
             //if (reqCookies != null)
             //{
@@ -56,7 +54,7 @@ namespace WebISMSManagmentSystem
                 }
            else if(TxtUsername.Text != loginUser.EmpID & txtpassword.Text != loginUser.Password)
                 {
-                    ldlMessage.Text = "Please use valid username and password !";
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Script", "<script type='text/javascript'>IncurrectPassword()</script>", false);
                 }
               
             }

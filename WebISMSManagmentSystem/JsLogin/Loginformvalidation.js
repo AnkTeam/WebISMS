@@ -12,3 +12,11 @@ function Loginvalidate() {
         alert("Passord must be filled out");
     }
 }
+
+function IncurrectPassword()
+{
+    alert("wrong password");
+}
+
+
+

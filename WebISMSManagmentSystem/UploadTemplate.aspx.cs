@@ -10,7 +10,7 @@ using BLLISMS;
 
 namespace WebISMSManagmentSystem
 {
-    public partial class UploadTemplate1 : System.Web.UI.Page
+    public partial class UploadTemplatefrm : System.Web.UI.Page
     {
         public UserRole Role;
         public List<Department> depts = new List<Department>();
