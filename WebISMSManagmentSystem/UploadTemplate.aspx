@@ -1,14 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/RollMaster.Master" AutoEventWireup="true" CodeBehind="UploadTemplate.aspx.cs" Inherits="WebISMSManagmentSystem.UploadTemplate1" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-     <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
     <script src="Scripts/jquery-1.10.2.js"></script>
 
     <script src="Scripts/bootstrap.min.js"></script>
-   
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css"/>
- 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" />
+
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -46,11 +47,27 @@
 
                     <% if (Role == UserRole.IsoUser)
                        { %>
-                    <input type="file" name="fileTemplate" id="fileTemplate" value="" multiple="multiple" onchange="ValidateSingleInput(this); " />
+                    <div class="input-group">
+                        <label class="input-group-btn">
+                            <span class="btn btn-primary">Browse…<input type="file" name="fileTemplate" id="fileTemplate" value="" style="display: none;" multiple="multiple" onchange="ValidateSingleInput(this); " />
+                            </span>
+                        </label>
+                        <input type="text" id ="fileInput" class="form-control" readonly="">
+                    </div>
+
+
                     <%} %>
                     <%else
                        { %>
-                    <input type="file" name="fileTemplate" id="fileTemplate" value="" onchange="ValidateSingleInput(this);" />
+                    <div class="input-group">
+                        <label class="input-group-btn">
+                            <span class="btn btn-primary">Browse…<input type="file" name="fileTemplate" id="fileTemplate" style="display: none;" value="" onchange="ValidateSingleInput(this);" />
+                            </span>
+                        </label>
+                        <input type="text" id ="fileInput" class="form-control" readonly="">
+                    </div>
+
+
                     <%} %>
 
                     <br />
@@ -60,7 +77,7 @@
                         </div>
                     </div>
                     <br />
-                    <input type="button" name="btnUploadTemplate" id="btnUploadTemplate" value="Upload Template" class ="btn-primary" />
+                    <input type="button" name="btnUploadTemplate" id="btnUploadTemplate" value="Upload Template" class="btn-primary"  style ="float:right;" />
 
                 </div>
                 <div class="modal-footer">
@@ -73,7 +90,7 @@
     </div>
 
 
-     
+
 
     <style type="text/css">
         .modal-dialog {
@@ -81,8 +98,14 @@
             margin-top: 50px;
             position: static !important;
         }
+
+       .input-group .form-control {
+            width: 100%;
+            margin-bottom: 5px;
+            margin-left: 0px;
+        }
     </style>
-    
+
 
     <script type="text/javascript">
         $(document).ready(function () {
@@ -155,8 +178,12 @@
             if (oInput.type == "file") {
                 var files = oInput.files;
                 for (var i = 0; i < oInput.files.length; i++) {
-
-
+                    if (oInput.files.length > 1) {
+                        $("#fileInput").val(oInput.files.length + " files selected");
+                    }
+                    else {
+                        $("#fileInput").val(files[i].name);
+                    }
                     var sFileName = files[i].name; //oInput.value;
                     var fileSize = parseFloat((((files[i].size) / 1024) / 1024)).toFixed(2);
                     if (sFileName.length > 0) {
@@ -172,12 +199,14 @@
                         if (!blnValid) {
                             alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", "));
                             oInput.value = "";
+                            $("#fileInput").val("");
                             return false;
                         }
                     }
                     if (fileSize > 25) {
                         alert('file :' + sFileName + ' and size :' + fileSize + ' is exceed , you can upload only 25 mb');
                         oInput.value = "";
+                        $("#fileInput").val("");
                         return false
                     }
                 }
@@ -192,6 +221,7 @@
             $("#Dept").multiselect("deselectAll", false).multiselect("refresh");
             $("#Dept").multiselect({ nonSelectedText: 'Select Department' });
             $("#fileTemplate").val("");
+            $("#fileInput").val("");
         }
 
 
@@ -199,7 +229,7 @@
     </script>
 
 
-    
+
 
 
 </asp:Content>
