@@ -32,9 +32,9 @@
                         </div>
                         <div class="col-sm-4">
                             <select id="Dept" name="Dept" multiple="multiple" style="float: left">
-                                <% foreach (var item in depts)
+                                <% foreach (var dept in depts)
                                    { %>
-                                <option value="<%=item.Key %>"><%= item.Value %></option>
+                                <option value="<%=dept.Id %>"><%= dept.Name %></option>
 
                                 <%} %>
                             </select>
