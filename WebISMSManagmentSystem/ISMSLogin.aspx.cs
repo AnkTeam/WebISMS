@@ -54,7 +54,7 @@ namespace WebISMSManagmentSystem
                 }
            else if(TxtUsername.Text != loginUser.EmpID & txtpassword.Text != loginUser.Password)
                 {
-                    ldlMessage.Text = "<script type='text/javascript'>showDialogue();</script>"; ;
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Script", "<script type='text/javascript'>IncurrectPassword()</script>", false);
                 }
               
             }
