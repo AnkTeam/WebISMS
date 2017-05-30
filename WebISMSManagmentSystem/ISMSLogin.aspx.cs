@@ -20,6 +20,7 @@ namespace WebISMSManagmentSystem
             //    //Response.Cookies["StudentCookies"].Expires = DateTime.Now.AddDays(-1);
             //    //Response.Redirect("Result.aspx");  //to refresh the page
             //}
+
         }
 
 
@@ -53,7 +54,7 @@ namespace WebISMSManagmentSystem
                 }
            else if(TxtUsername.Text != loginUser.EmpID & txtpassword.Text != loginUser.Password)
                 {
-                    ldlMessage.Text = "Please use valid username and password !";
+                    ldlMessage.Text = "<script type='text/javascript'>showDialogue();</script>"; ;
                 }
               
             }
