@@ -225,7 +225,9 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="UploadTemplate\" />
+    <Folder Include="UploadTemplate\ALL\" />
+    <Folder Include="UploadTemplate\HR\" />
+    <Folder Include="UploadTemplate\IT\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLLISMS\BLLISMS.csproj">
