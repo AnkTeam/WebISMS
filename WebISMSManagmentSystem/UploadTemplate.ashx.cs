@@ -66,31 +66,13 @@ namespace WebISMSManagmentSystem
             }
             catch (Exception ex)
             {
+            
                 RemoveFile(templates);
                 ErrorLog(ex);
                 throw ex;
             }
         }
-        //private string GetDepartment(int DeparmentId)
-        //{
-        //    string DeptName = string.Empty;
-        //    switch (DeparmentId)
-        //    {
-        //        case 1:
-        //            DeptName = "IT";
-        //            break;
-        //        case 2:
-        //            DeptName = "SD";
-        //            break;
-        //        case 3:
-        //            DeptName = "HR";
-        //            break;
-        //        default:
-        //            DeptName = "ALL";
-        //            break;
-        //    }
-        //    return DeptName;
-        //}
+       
 
         private void RemoveFile(List<DocTemplate> templates)
         {
