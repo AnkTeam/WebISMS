@@ -9,10 +9,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></cc1:ToolkitScriptManager>
     
-   
-
-   
-        
     <center>
         
         <div id="new div" style="margin-left:-800px;margin-top:20px;; height: 31px; width: 279px;">

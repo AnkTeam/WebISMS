@@ -5,6 +5,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Web;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace WebISMSManagmentSystem
 {
@@ -62,7 +64,7 @@ namespace WebISMSManagmentSystem
                                                     new XAttribute("DocumentName", template.DocumentName),
                                                     new XAttribute("DocumentUrl", template.DocumentUrl)
                                                     )
-                                                   );
+                                                    );
 
             }
             catch (Exception ex)

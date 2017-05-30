@@ -1,8 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/RollMaster.Master" AutoEventWireup="true" CodeBehind="UploadTemplate.aspx.cs" Inherits="WebISMSManagmentSystem.UploadTemplate1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
 
      <link href="Content/bootstrap.css" rel="stylesheet" />
     <script src="Scripts/jquery-1.10.2.js"></script>
@@ -10,17 +7,12 @@
     <script src="Scripts/bootstrap.min.js"></script>
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css"/>
  
-     
 
-    <style type="text/css">
-        .modal-dialog {
-            margin-right: 500px;
-            margin-top: 50px;
-            position: static !important;
-        }
-    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <button type="button" id="btnAdd" class="btn btn-info btn-lg" data-toggle="modal" data-target="#uploadTemplateModel">Upload Template</button>
     <div class=" modal fade" id="uploadTemplateModel" role="dialog" data-keyboard="false" data-backdrop="false">
 
@@ -79,6 +71,18 @@
             </div>
         </div>
     </div>
+
+
+     
+
+    <style type="text/css">
+        .modal-dialog {
+            margin-right: 500px;
+            margin-top: 50px;
+            position: static !important;
+        }
+    </style>
+    
 
     <script type="text/javascript">
         $(document).ready(function () {
