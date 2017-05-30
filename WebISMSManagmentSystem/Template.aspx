@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/RollMaster.Master" AutoEventWireup="true" CodeBehind="UploadTemplatefrm.aspx.cs" Inherits="WebISMSManagmentSystem.UploadTemplatefrm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/RollMaster.Master" AutoEventWireup="true" CodeBehind="Template.aspx.cs" Inherits="WebISMSManagmentSystem.Template" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-     <link href="Content/bootstrap.css" rel="stylesheet" />
+       <link href="Content/bootstrap.css" rel="stylesheet" />
     <script src="Scripts/jquery-1.10.2.js"></script>
 
     <script src="Scripts/bootstrap.min.js"></script>
@@ -193,9 +193,6 @@
 
 
     </script>
-
-
-    
 
 
 </asp:Content>

@@ -93,6 +93,8 @@
     <Content Include="bin\WebISMSManagmentSystem.dll.config" />
     <Content Include="ISMSmaster.Master" />
     <Content Include="RollMaster.Master" />
+    <Content Include="Template.aspx" />
+    <Content Include="UploadTemplate.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -123,6 +125,7 @@
     <Content Include="obj\Debug\WebISMSManagmentSystem.dll" />
     <Content Include="obj\Debug\WebISMSManagmentSystem.pdb" />
     <Content Include="preview.png" />
+    <Content Include="UploadTemplate.aspx" />
     <Content Include="User.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
@@ -163,6 +166,23 @@
     <Compile Include="RollMaster.Master.designer.cs">
       <DependentUpon>RollMaster.Master</DependentUpon>
     </Compile>
+    <Compile Include="Template.aspx.cs">
+      <DependentUpon>Template.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template.aspx.designer.cs">
+      <DependentUpon>Template.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadTemplate.ashx.cs">
+      <DependentUpon>UploadTemplate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadTemplate.aspx.cs">
+      <DependentUpon>UploadTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadTemplate.aspx.designer.cs">
+      <DependentUpon>UploadTemplate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User.aspx.cs">
       <DependentUpon>User.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -180,6 +200,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Jsfiles\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>

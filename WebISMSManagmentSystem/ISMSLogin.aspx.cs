@@ -10,11 +10,9 @@ namespace WebISMSManagmentSystem
 {
     public partial class ISMSLogin : System.Web.UI.Page
     {
-        BLLLogin bal = new BLLLogin();
-     
+        BLLLogin bal = new BLLLogin();       
         protected void Page_Load(object sender, EventArgs e)
-        {
-          
+        {          
             //HttpCookie reqCookies = Request.Cookies["UserId"];
             //if (reqCookies != null)
             //{
@@ -22,7 +20,6 @@ namespace WebISMSManagmentSystem
             //    //Response.Cookies["StudentCookies"].Expires = DateTime.Now.AddDays(-1);
             //    //Response.Redirect("Result.aspx");  //to refresh the page
             //}
-
         }
 
 

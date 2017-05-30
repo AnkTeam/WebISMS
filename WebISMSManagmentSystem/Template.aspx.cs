@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace WebISMSManagmentSystem
 {
-    public partial class UploadTemplatefrm : System.Web.UI.Page
+    public partial class Template : System.Web.UI.Page
     {
         public UserRole Role;
         public Dictionary<int, string> depts = new Dictionary<int, string>();
