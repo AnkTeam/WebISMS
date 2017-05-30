@@ -30,8 +30,7 @@ namespace DALISMS
 
                         cmd.Parameters.AddWithValue("@Username", username);
                         cmd.Parameters.AddWithValue("@Password", password);
-                        SqlParameter outputParam = cmd.Parameters.Add("@ID", SqlDbType.Int);
-                        outputParam.Direction = ParameterDirection.Output;
+                        cmd.Parameters.AddWithValue("@status", 0);
                         dr = cmd.ExecuteReader();
                         //cmd.ExecuteNonQuery();
                         //int retval = (int)cmd.Parameters["@status"].Value;
@@ -44,7 +43,7 @@ namespace DALISMS
                             entity.RoleName = dr["Roll_Name"].ToString();
 
                         }
-                        int a = (int) outputParam.Value;
+                        
 
                     }
                 }
@@ -71,9 +70,9 @@ namespace DALISMS
 
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@EmpID", entity.EmpID);
-                        cmd.Parameters.AddWithValue("@EmpName", entity.EmpName);
+                    
                         cmd.Parameters.AddWithValue("@LastLoginTime", entity.LastLogin);
-                        cmd.Parameters.AddWithValue("@RollName", entity.RoleName);
+                    
                      insert =    cmd.ExecuteNonQuery();
                         if(insert == 1)
                         {

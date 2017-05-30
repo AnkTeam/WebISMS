@@ -29,9 +29,8 @@ namespace WebISMSManagmentSystem
         protected void LoginISMSBntn_Click(object sender, EventArgs e)
         {
             try
-            {
-                
-                LoginUser loginUser = bal.LoginInformation(TextBox1.Text, TextBox2.Text);
+            {                
+                LoginUser loginUser = bal.LoginInformation(TxtUsername.Text, txtpassword.Text);
                 Session["Emp_Name"] = loginUser.EmpName;
                 Session["Roll"] = loginUser.RoleName;
                 if (loginUser.RoleID == 2)
@@ -50,11 +49,16 @@ namespace WebISMSManagmentSystem
                     Response.Redirect("Administrator.aspx");
                 }
 
-                else
+                else if(TxtUsername.Text == "" || txtpassword.Text == "")
+                {
+
+
+                }
+           else if(TxtUsername.Text != loginUser.EmpID & txtpassword.Text != loginUser.Password)
                 {
                     ldlMessage.Text = "Please use valid username and password !";
                 }
-
+              
             }
             catch
             {
