@@ -10,6 +10,6 @@
 namespace WebISMSManagmentSystem {
     
     
-    public partial class UploadTemplatefrm {
+    public partial class UploadTemplate {
     }
 }
