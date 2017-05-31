@@ -14,14 +14,20 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <button type="button" id="btnAdd" class="btn btn-info btn-lg" data-toggle="modal" data-target="#uploadTemplateModel">Upload Template</button>
+    <button type="button" id="btnAdd" class="btn btn-info btn-lg" data-toggle="modal" data-target="#uploadTemplateModel">
+
+        Upload Template
+        
+    </button>
     <div class=" modal fade" id="uploadTemplateModel" role="dialog" data-keyboard="false" data-backdrop="false">
 
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class=" modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class=" modal-title">Upload Template</h4>
+                    <h4 class=" modal-title">
+                        Upload Template
+                    </h4>
 
                 </div>
 
@@ -72,8 +78,8 @@
 
                     <br />
                     <div class="col-xs-12 col-sm-12 progress-container">
-                        <div class="progress progress-striped active">
-                            <div class="progress-bar progress-bar-success"></div>
+                        <div class="progress progress-striped active" style=" width:100%;"  aria-valuenow="100" aria-valuemin="100" aria-valuemax="100" >
+                            <div class="progress-bar progress-bar-success" style=" width:100%;"  aria-valuenow="100" aria-valuemin="100" aria-valuemax="100"  ></div>
                         </div>
                     </div>
                     <br />
@@ -128,13 +134,19 @@
         });
         function UploadTemplate() {
             var files = $("#fileTemplate")[0].files;
-            var progressbar = $(".progress-bar");
+         //   var progressbar = $(".progress-bar");
             if (files.length > 0) {
                 var formData = new FormData();
                 for (var i = 0; i < files.length; i++) {
                     formData.append(files[i].name, files[i]);
                 }
                 formData.append("Department", ValidateDept());
+
+               
+                $(".progress-bar").animate({
+                    width: "100%"
+                }, 0);
+                $(".progress").show();
                 $.ajax({
 
                     url: "/Upload.ashx",
@@ -152,10 +164,7 @@
                     }
 
                 });
-                $(".progress").show();
-                $(".progress-bar").animate({
-                    width: "100%"
-                }, 0);
+               
             }
             else {
                 alert('Please select file .doc,.xls,.xlsx,.ppt,.pptx extension based');
