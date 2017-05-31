@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/TabDesign.css" rel="stylesheet" />
     <style>
-     
+             
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -35,7 +35,7 @@
         </div>
 
     <div>
-    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <Triggers><asp:AsyncPostBackTrigger ControlID="Menu1" />   </Triggers>
         <ContentTemplate>
             <asp:Label ID="TimeLabel" runat="server" Text="" />   
@@ -51,7 +51,7 @@
         </asp:MultiView>
         </div> 
         </ContentTemplate>
-        </asp:UpdatePanel>       
+        </asp:UpdatePanel>     
     </div>
         </center>
      

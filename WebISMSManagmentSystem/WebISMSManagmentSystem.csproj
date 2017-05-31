@@ -55,6 +55,14 @@
     <Reference Include="AjaxControlToolkit">
       <HintPath>..\packages\AjaxControlToolkit.17.1.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
     </Reference>
+    <Reference Include="BLLISMS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BLLISMS\obj\Debug\BLLISMS.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityLayerISMS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EntityLayerISMS\obj\Debug\EntityLayerISMS.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -77,12 +85,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\AjaxControlToolkit.dll" />
-    <Content Include="bin\BLLISMS.dll" />
-    <Content Include="bin\BLLISMS.pdb" />
-    <Content Include="bin\DALISMS.dll" />
-    <Content Include="bin\DALISMS.pdb" />
-    <Content Include="bin\EntityLayerISMS.dll" />
-    <Content Include="bin\EntityLayerISMS.pdb" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -93,6 +95,7 @@
     <Content Include="packages.config" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="WebISMSManagmentSystem.csproj.vspscc" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -131,7 +134,6 @@
     <Content Include="ISMSmaster.Master" />
     <Content Include="RollMaster.Master" />
     <Content Include="Template.aspx" />
-    <Content Include="UploadTemplate.ashx" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -163,6 +165,7 @@
     <Content Include="obj\Debug\WebISMSManagmentSystem.dll" />
     <Content Include="obj\Debug\WebISMSManagmentSystem.pdb" />
     <Content Include="preview.png" />
+    <Content Include="UploadTemplate.ashx" />
     <Content Include="UploadTemplate.aspx" />
     <Content Include="User.aspx" />
     <Content Include="Web.config" />
@@ -204,6 +207,23 @@
     <Compile Include="RollMaster.Master.designer.cs">
       <DependentUpon>RollMaster.Master</DependentUpon>
     </Compile>
+    <Compile Include="Template.aspx.cs">
+      <DependentUpon>Template.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template.aspx.designer.cs">
+      <DependentUpon>Template.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadTemplate.ashx.cs">
+      <DependentUpon>UploadTemplate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadTemplate.aspx.cs">
+      <DependentUpon>UploadTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadTemplate.aspx.designer.cs">
+      <DependentUpon>UploadTemplate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User.aspx.cs">
       <DependentUpon>User.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -225,16 +245,6 @@
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="UploadTemplate\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BLLISMS\BLLISMS.csproj">
-      <Project>{66207e26-7bb6-475c-b5f2-04eab1b5603b}</Project>
-      <Name>BLLISMS</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EntityLayerISMS\EntityLayerISMS.csproj">
-      <Project>{325c674f-7a4e-4de4-966c-49d6dd4b7f6b}</Project>
-      <Name>EntityLayerISMS</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

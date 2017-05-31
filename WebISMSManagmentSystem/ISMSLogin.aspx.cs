@@ -54,8 +54,9 @@ namespace WebISMSManagmentSystem
                 }
            else if(TxtUsername.Text != loginUser.EmpID & txtpassword.Text != loginUser.Password)
                 {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Script", "<script type='text/javascript'>IncurrectPassword()</script>", false);
-                }
+                    //  ScriptManager.RegisterStartupScript(this, this.GetType(), "Script", "<script type='text/javascript'>IncurrectPassword()</script>", false);
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "myScript", "IncurrectPassword();", true);
+                }     
               
             }
             catch
