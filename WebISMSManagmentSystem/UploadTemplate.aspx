@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/RollMaster.Master" AutoEventWireup="true" CodeBehind="UploadTemplate.aspx.cs" Inherits="WebISMSManagmentSystem.UploadTemplate1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/RollMaster.Master" AutoEventWireup="true" CodeBehind="UploadTemplate.aspx.cs" Inherits="WebISMSManagmentSystem.UploadTemplate" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
@@ -137,7 +137,7 @@
                 formData.append("Department", ValidateDept());
                 $.ajax({
 
-                    url: "/UploadTemplate.ashx",
+                    url: "/Upload.ashx",
                     method: "post",
                     data: formData,
                     contentType: false,
